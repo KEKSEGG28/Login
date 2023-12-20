@@ -13,13 +13,11 @@ console.log(allInputs);
 let error = false;
 formNode.addEventListener("submit", (e) => {
   e.preventDefault();
+  wrongpass(allInputs);
   error = false;
   for (const input of allInputs) {
     submitInput(input, true);
     input.value = "";
-    if (allInputs[3].value != allInputs[2].valuse) {
-      label.textContent = `Пароли не совпадают`;
-    }
   }
   if (!error) console.log("submit");
 });
@@ -32,10 +30,10 @@ function collection(allInputs) {
 function submitInput(input, submit) {
   const label = input.parentNode.querySelector(".labels");
   label.textContent = "";
-
   let summ = input.value;
-  console.log(allInputs[1].value);
+  // console.log(allInputs[1].value);
   console.log(allInputs[3].value);
+  console.log(allInputs[2].value);
   if (input.dataset.required && input.value === "") {
     label.textContent = `Поле не заполнено`;
     if (submit) error = true;
@@ -50,6 +48,16 @@ function submitInput(input, submit) {
       if (submit) error = true;
     }
   }
+}
+
+function wrongpass(allInputs) {
+  let pass = allInputs[2].value;
+  let confirm = allInputs[3].valuse;
+  if (pass != confirm) {
+    console.log(`Пароли не совпадают`);
+  }
+  console.log(pass);
+  console.log(confirm);
 }
 
 function displayRegNone() {
