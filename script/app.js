@@ -9,17 +9,18 @@ const regLogNode = document.querySelector(".registerlogin");
 const logRegNode = document.querySelector(".loginregister");
 const formNode = document.querySelector(".inputs");
 const allInputs = document.querySelectorAll("input");
-console.log(allInputs);
+
 let error = false;
 formNode.addEventListener("submit", (e) => {
   e.preventDefault();
-  wrongpass(allInputs);
+
   error = false;
   for (const input of allInputs) {
     submitInput(input, true);
     input.value = "";
   }
   if (!error) console.log("submit");
+  wrongpass(allInputs);
 });
 function collection(allInputs) {
   for (const input of allInputs) {
@@ -32,8 +33,8 @@ function submitInput(input, submit) {
   label.textContent = "";
   let summ = input.value;
   // console.log(allInputs[1].value);
-  console.log(allInputs[3].value);
-  console.log(allInputs[2].value);
+  // console.log(allInputs[3].value);
+  // console.log(allInputs[2].value);
   if (input.dataset.required && input.value === "") {
     label.textContent = `Поле не заполнено`;
     if (submit) error = true;
@@ -50,14 +51,12 @@ function submitInput(input, submit) {
   }
 }
 
-function wrongpass(allInputs) {
-  let pass = allInputs[2].value;
-  let confirm = allInputs[3].valuse;
-  if (pass != confirm) {
-    console.log(`Пароли не совпадают`);
-  }
-  console.log(pass);
-  console.log(confirm);
+function wrongpass() {
+  const pass = document.querySelector(".password");
+  const confirm = document.querySelector(".confirm");
+  if (pass.value != confirm.value) {
+    pass.setCustomValidity("Пароли не совпадают");
+  } else pass.setCustomValidity("");
 }
 
 function displayRegNone() {
