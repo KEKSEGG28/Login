@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <script defer type="module" src="./script/app.js"></script>
+    <title>Регистрация</title>
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <div class="img">
+          <img src="./src/img/Illustration Picture.png" alt="" />
+        </div>
+        <div class="container">
+          <div class="text">
+            <h2 class="title">Добро пожаловать</h2>
+            <p class="subtitle">
+              Это регистрация производится на сайт левых китайских айфонов
+            </p>
+          </div>
+          <div class="btn">
+            <button class="createbtn">Create Account</button>
+            <button class="loginbtn">Login</button>
+          </div>
+        </div>
+        <div class="register displaynone">
+          <div class="container__register">
+            <div class="up">
+              <div class="textregister">
+                <p class="registertitle">Салют...</p>
+                <p class="registersubtitle">Регистрация</p>
+              </div>
+              <button class="back">
+                <img src="./src/img/Close.svg" alt="" />
+              </button>
+            </div>
+            <form class="inputs">
+              <div>
+                <input
+                  class="email"
+                  type="text"
+                  data-required="true"
+                  placeholder="Mail"
+                  data-min-length="2"
+                  data-max-length="12"
+                />
+                <label for="" class="labels"></label>
+              </div>
+              <div>
+                <input
+                  class="course"
+                  type="text"
+                  placeholder="Course"
+                  data-min-length="2"
+                  data-max-length="12"
+                />
+                <label for="" class="labels"></label>
+              </div>
+              <div>
+                <input
+                  class="password"
+                  type="password"
+                  data-required="true"
+                  placeholder="Password"
+                  data-min-length="2"
+                  data-max-length="12"
+                />
+                <label for="" class="labels"></label>
+              </div>
+              <div>
+                <input
+                  class="confirm"
+                  type="password"
+                  data-required="true"
+                  placeholder="Confirm Password"
+                  data-min-length="2"
+                  data-max-length="12"
+                />
+                <label for="" class="labels"></label>
+              </div>
+              <button class="registrationbtn">Регистрация</button>
+            </form>
+
+            <p class="registertitles">
+              Есть аккаунт? <a class="registerlogin">Логин</a>
+            </p>
+          </div>
+        </div>
+        <div class="login displaynone">
+          <div class="container__register">
+            <div class="up">
+              <div class="textregister">
+                <p class="registertitle">С возвращением</p>
+                <p class="registersubtitle">Логин</p>
+              </div>
+              <button class="backlog">
+                <img src="./src/img/Close.svg" alt="" />
+              </button>
+            </div>
+            <form class="inputs">
+              <div>
+                <input
+                  class="emaillogin"
+                  type="email"
+                  data-required="true"
+                  placeholder="Mail"
+                  data-min-length="2"
+                  data-max-length="12"
+                />
+                <label for="" class="labels"></label>
+              </div>
+              <div>
+                <input
+                  class="passwordlogin"
+                  type="password"
+                  data-required="true"
+                  placeholder="Password"
+                  data-min-length="2"
+                  data-max-length="12"
+                />
+                <label for="" class="labels"></label>
+              </div>
+              <div class="forgot">
+                <input class="checkbox" type="checkbox" />
+                <label class="remember" for="">Запомни меня</label>
+                <a href=""></a>
+              </div>
+              <button class="loginbutton registrationbtn">Логин</button>
+            </form>
+
+            <p class="registertitles">
+              Нету аккаунта <a class="loginregister">Регистрация</a>
+            </p>
+          </div>
+        </div>
+        <div class="footer">
+          <p class="footertext">All Right Reserved @2021</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
